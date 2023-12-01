@@ -5,7 +5,7 @@ function numberCasualGenerate (){
 
 function bombGenerator (){
 j=1;
-while (j<16){
+while (j<=16){
   let numeroCasuale = numberCasualGenerate();
   if(!ArrayCasuale.includes(numeroCasuale)){
     ArrayCasuale.push(numeroCasuale);
@@ -14,7 +14,7 @@ while (j<16){
 }}
 
 
-let ArrayCasuale = [""]
+let ArrayCasuale = []
 
 bombGenerator()
 console.log(ArrayCasuale)
@@ -34,26 +34,12 @@ buttonStart.addEventListener("click", function(){
     nuovoQuadrato.textContent = (i);
     console.log(nuovoQuadrato)
 
-    nuovoQuadrato.addEventListener("click", function(){
-      if(!ArrayCasuale.includes(nuovoQuadrato.textContent)){
-        nuovoQuadrato.classList.add("bg-primary")
-      }
-      else{
-        nuovoQuadrato.classList.add("bg-danger")
-      }
+     
+   
       
-    })
-    
+    }})
 
-}})
-
-
- 
-  
-
-{
-    
-    
-  }
-
+    nuovoQuadrato.addEventListener("click", function(){
+      nuovoQuadrato.classList.add("bg-primary")
+      })
   
